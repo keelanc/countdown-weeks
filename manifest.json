@@ -1,16 +1,16 @@
 {
 "update_url": "https://clients2.google.com/service/update2/crx",
 
-  "name": "Countdown",
-  "version": "0.5",
-  "manifest_version": 2,
+  "name": "Countdown Weeks",
+  "version": "0.6",
+  "manifest_version": 3,
   "description": "Keep track of your most important future events with a countdown on the new tab page!",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "author": "Srikar Gudipati",
+  "author": "Srikar Gudipati & Keelan Chu For",
   "incognito": "split",
   "offline_enabled": true,
   "background": {

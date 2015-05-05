@@ -72,6 +72,7 @@ var createCountdown = function(id, title, end) {
     var minute = second * 60;
     var hour = minute * 60;
     var day = hour * 24;
+    var week = day * 7;
     var timer;
 
     update = function() {
@@ -90,6 +91,7 @@ var createCountdown = function(id, title, end) {
             }, function() {});
             return;
         }
+        var weeks = Math.round(distance / week);
         var days = Math.floor(distance / day);
         var hours = Math.floor((distance % day) / hour);
         var minutes = Math.floor((distance % hour) / minute);
@@ -97,7 +99,7 @@ var createCountdown = function(id, title, end) {
 
         var selector = $('#' + id);
         selector.find('.countdown').html(days + ' day' + getSuffix(days) + ', ' + hours + ' hour' + getSuffix(hours) + ', ' + minutes + ' minute' + getSuffix(minutes) + ', and ' + seconds + ' second' + getSuffix(seconds) + ' until <span class="date">' + getDateString(end) + '</span>');
-        selector.find('.title').text(title);
+        selector.find('.title').text(title + ' (' + weeks + ' week' + getSuffix(weeks) + ')');
     };
 
     update();
